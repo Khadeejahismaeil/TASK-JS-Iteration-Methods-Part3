@@ -24,11 +24,15 @@ function convertCelsiusToFahrenheit(temps) {
 // "Mild" for temperatures between 20 and 24,
 // "Cool" for temperatures <20
 function labelTemperatures(temps) {
-return temps.map((temp)=>{
-if(temp>=25){return 'worm'}
-else if(temp>=25&&temp<25){ return 'mild';}
-else {return'mild';}})}
-
+  return temps.map((temp) => {
+    if (temp >= 25) {
+      return "Warm";
+    } else if (temp >= 20 && temp < 25) {
+      return "Mild";
+    } else {
+      return "Cool";
+    }
+  });}
 // Write a `getMaxTemperature` function that calculates and return the highest temperature of the month.
 function getMaxTemperature(temps) {
   return Math.max(...temps);
